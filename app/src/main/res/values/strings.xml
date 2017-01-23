@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HappyTrack</string>
+
+    <!---Track Activty-->
+    <string name="trackTitle">Rate Your Day</string>
+    <string name="title_activity_track">ActivityTrack</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!--Day View-->
+    <string name="date">21st January 2017</string>
+    <string name="noteslabel">Notes</string>
+    <string name="noteshint">Got promoted #work \nUse hashtags for better analysis!</string>
+</resources>

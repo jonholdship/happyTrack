@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/NavTrack"
+            android:icon="@drawable/menu_track"
+            android:title="Track" />
+        <item
+            android:id="@+id/NavRemind"
+            android:icon="@android:drawable/ic_lock_idle_alarm"
+            android:title="Set Reminder" />
+        <item
+            android:id="@+id/NavCalendar"
+            android:icon="@drawable/menu_calendar"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/NavAnalysis"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Analysis" />
+        <item android:title="Rate Us"
+            android:id="@+id/NavRate"
+            android:icon="@android:drawable/star_off" />
+    </group>
+    <item android:title="Settings"
+        android:id="@+id/NavSettings"
+        android:icon="@drawable/ic_action_name" />
+
+</menu>
