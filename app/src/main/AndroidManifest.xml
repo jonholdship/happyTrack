@@ -10,13 +10,30 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ActivityTrack"
-            android:label="@string/title_activity_track"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ActivityCalendar"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActivityNotify"
+            android:label="@string/title_activity_notify"
+            android:theme="@style/AppTheme" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:process=":remote" />
+
+        <activity
+            android:name=".ActivityAbout"
+            android:label="ActivityAbout"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

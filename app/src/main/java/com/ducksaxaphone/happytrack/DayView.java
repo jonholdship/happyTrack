@@ -59,11 +59,11 @@ public class DayView extends RelativeLayout {
     }
 
     private void changeFace(int sliderPos){
-        if (sliderPos<3){
+        if (sliderPos<2){
             happyFace.setImageResource(R.drawable.sadface2);
 
         }
-        else if (sliderPos<5){
+        else if (sliderPos<4){
             happyFace.setImageResource(R.drawable.sadface1);
         }
         else if (sliderPos < 6){

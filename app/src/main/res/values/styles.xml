@@ -8,19 +8,26 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="menuButtons">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:background">@drawable/menu_button</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
     <style name="standardTitles">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
     </style>
 
     <style name="whiteTitles" parent="standardTitles">
         <item name="android:textColor">@color/colorIcons</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">50dp</item>
     </style>
 
-    <style name="generalLabels" >
+    <style name="generalLabels">
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
 

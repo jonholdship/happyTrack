@@ -2,13 +2,47 @@
     <string name="app_name">HappyTrack</string>
 
     <!---Track Activty-->
-    <string name="trackTitle">Rate Your Day</string>
+    <string name="track_title">Rate Your Day</string>
     <string name="title_activity_track">ActivityTrack</string>
     <string name="action_settings">Settings</string>
 
+    <!---Notify Activity-->
+    <string name="notify_title">Remind Me</string>
+    <string name="button_never">Never</string>
+    <string name="button_daily">Daily</string>
 
     <!--Day View-->
     <string name="date">21st January 2017</string>
     <string name="noteslabel">Notes</string>
     <string name="noteshint">Got promoted #work \nUse hashtags for better analysis!</string>
+    <string name="title_activity_calendar">ActivityCalendar</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_notify">ActivityNotify</string>
+
+    <!--About Screen-->
+    <string name="about_title">Help &amp; About</string>
+    <string name="about_text">
+        <![CDATA[
+        <H1>What the app is for</H1>
+        <p>This app is for those who are interested in tracking small aspects of their daily life. Open this app near the end of each day and rate your day out of 10, add some notes if you like.
+         As time goes by you\'ll build up a lot of data on your every day happiness. Add notes so that when you look back, peaks and dips in your ratings have some explanation. It\'s all well and good to
+         look back and see a 10 but it is better to see a 10 coupled with the note "first date with X". Use hashtags so that all the ratings that you associated with #work or #friends can be easily found
+         and compared to the average day.</p>
+        <H1>How to use it</H1>
+        <p>There are three major parts to the app. The main screen simply lets you rate your day and add notes. Opening the menu drawer on the left will reveal a few other screens. The calendar lets you look back
+         over previous days and rate or inspect them. The reminder screen will let you set a daily notification, reminding you to rate your day. Set a reminder for the end of your day and track yourself regularly!</p>
+         <H1>Once you\'ve rated</H1>
+         <p> Once you have built up a lot of data, you\'ll want to do something with it. If you installed the app, chances are you wanted to create a data set to investigate yourself. If so, there is an export option for
+         your data in the settings screen. The dates of your rated days, your ratings and your notes will all be packaged up and opened as an attachment in your email app. Enjoy and share your results with us!</p>
+         <p> If you are keen on tracking your days but don\'t know what to do with the data, we have an analysis screen. This will tell you information that has been gleaned from the database you have created. Don\'t worry,
+         your data is sent automatically to our server, analysed and sent back without being stored. You\'ll learn your favourite day of the week, your happiest and saddest hashtags and other fun facts about you.</p>
+
+
+        ]]>
+    </string>
+
+
 </resources>

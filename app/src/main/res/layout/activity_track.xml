@@ -22,5 +22,6 @@ tools:openDrawer="start">
     android:background="@color/colorPrimary"
     app:menu="@menu/activity_track_drawer"
     app:itemTextColor="@color/colorIcons"
-    app:itemIconTint="@color/colorIcons"/>
+    app:itemIconTint="@color/colorIcons"
+    app:headerLayout="@layout/nav_header"/>
 </android.support.v4.widget.DrawerLayout>

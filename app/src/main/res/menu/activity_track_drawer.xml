@@ -19,12 +19,21 @@
             android:id="@+id/NavAnalysis"
             android:icon="@drawable/ic_menu_manage"
             android:title="Analysis" />
+    </group>
+    <group android:checkableBehavior="single">
         <item android:title="Rate Us"
             android:id="@+id/NavRate"
             android:icon="@android:drawable/star_off" />
+
+        <item android:title="Help &amp; About"
+            android:id="@+id/NavAbout"
+            android:icon="@android:drawable/ic_menu_help" />
+
+
+        <item android:title="Settings"
+            android:id="@+id/NavSettings"
+            android:icon="@drawable/ic_action_name" />
+
     </group>
-    <item android:title="Settings"
-        android:id="@+id/NavSettings"
-        android:icon="@drawable/ic_action_name" />
 
 </menu>

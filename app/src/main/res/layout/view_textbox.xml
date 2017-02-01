@@ -23,12 +23,12 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
+        android:gravity="top"
         android:inputType="textMultiLine"
+        android:hint="@string/noteshint"
         android:ems="10"
         android:id="@+id/NotesText"
         android:layout_weight="1"
-        android:hint="@string/noteshint"
         android:layout_alignParentStart="true"
-        android:maxLines="10"
         android:padding="16dp" />
 </LinearLayout>
