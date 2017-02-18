@@ -9,7 +9,7 @@
     android:layout_margin="16dp">
 
     <TextView
-        style="@style/standardTitles"
+        style="@style/generalLabels"
         android:background="@color/colorIcons"
         android:text="@string/noteslabel"
         android:layout_width="wrap_content"
@@ -30,5 +30,6 @@
         android:id="@+id/NotesText"
         android:layout_weight="1"
         android:layout_alignParentStart="true"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:background="@android:color/transparent" />
 </LinearLayout>

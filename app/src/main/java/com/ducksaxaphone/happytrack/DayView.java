@@ -11,6 +11,8 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
@@ -20,7 +22,7 @@ import butterknife.OnTextChanged;
  */
 public class DayView extends RelativeLayout {
 
-    @BindView (R.id.HappySlider) SeekBar happySlider;
+    @BindView (R.id.HappySlider) DiscreteSeekBar happySlider;
     @BindView (R.id.HappyFace) ImageView happyFace;
     @BindView (R.id.dateText) TextView dateText;
     @BindView (R.id.NotesText) EditText notesBox;
@@ -39,37 +41,39 @@ public class DayView extends RelativeLayout {
         View view = inflater.inflate(R.layout.view_day, this, true);
         ButterKnife.bind(this,view);
 
-        happySlider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        happySlider.setOnProgressChangeListener(new DiscreteSeekBar.OnProgressChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            public void onProgressChanged(DiscreteSeekBar seekBar, int value, boolean fromUser) {
+                int progress = seekBar.getProgress();
                 currentDay.setRating(progress);
                 changeFace(progress);
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
+            public void onStartTrackingTouch(DiscreteSeekBar seekBar) {
 
             }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
+            public void onStopTrackingTouch(DiscreteSeekBar seekBar) {
 
             }
         });
+
     }
 
     private void changeFace(int sliderPos){
-        if (sliderPos<2){
+        if (sliderPos<3){
             happyFace.setImageResource(R.drawable.sadface2);
 
         }
-        else if (sliderPos<4){
+        else if (sliderPos<5){
             happyFace.setImageResource(R.drawable.sadface1);
         }
-        else if (sliderPos < 6){
+        else if (sliderPos < 7){
             happyFace.setImageResource(R.drawable.mediumface);
         }
-        else if (sliderPos <8){
+        else if (sliderPos <9){
             happyFace.setImageResource(R.drawable.happyface1);
         }
         else{

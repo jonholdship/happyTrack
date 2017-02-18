@@ -11,7 +11,8 @@
 
     <ImageButton
         android:id="@+id/MenuButton"
-        style="@style/menuButtons" />
+        style="@style/menuButtons"
+        app:srcCompat="@drawable/menu_button" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +30,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ReminderClock"
-        android:timePickerMode="clock"
         android:headerBackground="@color/colorPrimary"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -44,27 +44,10 @@
         android:layout_below="@+id/MenuButton"
         android:layout_centerHorizontal="true">
 
-        <Button
-            android:text="@string/button_never"
+        <com.ducksaxaphone.happytrack.TextSwitch
+            android:id="@+id/ReminderSwitch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ButtonNever"
-            android:background="@drawable/textboxborder"
-            android:layout_weight="1"
-            android:textAppearance="@style/TextAppearance.AppCompat" />
-
-        <Button
-            android:text="@string/button_daily"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ButtonDaily"
-            android:background="@drawable/textboxborder"
-            android:backgroundTint="@color/colorPrimary"
-            android:height="0dp"
-            android:elevation="0dp"
-            android:layout_weight="1"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@color/colorIcons"/>
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:background="@drawable/textboxborder">
+
+
+      <Button
+          android:text="@string/button_never"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/ButtonNever"
+          android:background="#00000000"
+          android:layout_weight="1"
+          style="@style/generalLabels" />
+
+      <Button
+          android:text="@string/button_daily"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/ButtonDaily"
+          android:background="@drawable/rightboxborder"
+          android:layout_weight="1"
+          style="@style/generalLabels"
+          android:textColor="@color/colorIcons"/>
+   </LinearLayout>
+
+</layout>

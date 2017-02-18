@@ -33,7 +33,14 @@
         <activity
             android:name=".ActivityAbout"
             android:label="ActivityAbout"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActivityAnalysis"
+            android:label="@string/title_activity_analysis"
+            android:theme="@style/AppTheme">
+
+
+        </activity>
     </application>
 
 </manifest>

@@ -4,13 +4,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:focusableInTouchMode="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/date"
-            android:ems="10"
             android:id="@+id/dateText"
             android:layout_marginTop="16dp"
             android:textAlignment="center"
@@ -18,12 +19,15 @@
             android:layout_centerHorizontal="true"
             style="@style/generalLabels" />
 
-        <SeekBar
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="9"
-            android:progress="5"
+            app:dsb_max="10"
+            app:dsb_min="1"
+            app:dsb_value="5"
+            app:dsb_progressColor="@color/colorAccent"
+            app:dsb_indicatorColor="@color/colorAccent"
+            app:dsb_trackColor="@color/colorAccent"
             android:layout_marginTop="34dp"
             android:id="@+id/HappySlider"
             android:layout_below="@+id/dateText"
@@ -45,7 +49,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="16dp"
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
 

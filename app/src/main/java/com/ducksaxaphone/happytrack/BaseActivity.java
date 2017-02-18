@@ -75,6 +75,8 @@ public class BaseActivity extends AppCompatActivity
             startActivity(i);
 
         } else if (id == R.id.NavAnalysis) {
+            Intent i = new Intent(this, ActivityAnalysis.class);
+            startActivity(i);
 
         } else if (id == R.id.NavRate) {
 

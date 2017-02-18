@@ -8,6 +8,8 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,12 +22,16 @@ public class ActivityTrack extends BaseActivity {
     @BindView(R.id.TodayView) DayView todayView;
 
     private DayDataSource dayData;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //open database for checking dates
         dayData=new DayDataSource(this);
         dayData.open();
+
+        //firebase for basic app data
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         //usualview set up, with menu bit
         setContentView(R.layout.activity_track);

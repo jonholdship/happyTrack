@@ -13,6 +13,8 @@ import android.support.v4.app.NotificationCompat;
 import android.widget.Button;
 import android.widget.TimePicker;
 
+import org.w3c.dom.Text;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -21,29 +23,27 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class ActivityNotify extends BaseActivity {
-    @BindView(R.id.ButtonDaily) Button dailyButton;
-    @BindView(R.id.ButtonNever) Button neverButton;
+public class ActivityNotify extends BaseActivity implements TextSwitch.TextSwitchListener{
+    @BindView(R.id.ReminderSwitch) TextSwitch reminderSwitch;
     @BindView(R.id.ReminderClock) TimePicker reminderClock;
 
     public static final String PREFS_NAME= "NotificationPrefs";
     private boolean reminders,timeChosenFirst;
-    long targetMilliseconds;
-
+    int alarmHour, alarmMinute;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //usualview set up, with menu bit
         setContentView(R.layout.activity_notify);
         ButterKnife.bind(this);
-
+        reminderSwitch.setListener(this);
         // Restore daily/never notification prefs.
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         reminders = settings.getBoolean("reminders", false);
         if (reminders){
-            onDailyClick();
+            rightButtonPressed();
         }
         else{
-            onNeverClick();
+            leftButtonPressed();
         }
 
         reminderClock.setCurrentHour(settings.getInt("hours",22));
@@ -55,7 +55,8 @@ public class ActivityNotify extends BaseActivity {
             @Override
             public void onTimeChanged(TimePicker timePicker, int i, int i1) {
                 //i is in hours and i1 in minutes
-                targetMilliseconds = 60000*((60*i)+i1);
+                alarmHour = i;
+                alarmMinute = i1;
                 if (reminders){
                 createNotifcation();
                 }
@@ -81,12 +82,7 @@ public class ActivityNotify extends BaseActivity {
         super.onPause();
     }
 
-    @OnClick(R.id.ButtonDaily)
-    public void onDailyClick(){
-
-        //change buttons to look like daily is selected
-        dailyButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryLight));
-        neverButton.setBackgroundColor(getResources().getColor(R.color.colorIcons));
+    public void rightButtonPressed(){
 
         //create notification
         reminders=true;
@@ -100,11 +96,7 @@ public class ActivityNotify extends BaseActivity {
         editor.commit();
     }
 
-    @OnClick(R.id.ButtonNever)
-    public void onNeverClick(){
-        neverButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryLight));
-        dailyButton.setBackgroundColor(getResources().getColor(R.color.colorIcons));
-
+    public void leftButtonPressed(){
         reminders=false;
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
@@ -119,25 +111,13 @@ public class ActivityNotify extends BaseActivity {
 
         //unbelievably complicated way to get current time of day in milliseconds
         Calendar calendar= Calendar.getInstance();
-        long currentTime= (calendar.get(Calendar.HOUR_OF_DAY)*60)+calendar.get(Calendar.MINUTE);
-        currentTime=currentTime*60*1000;
+        calendar.set(Calendar.HOUR_OF_DAY,alarmHour);
+        calendar.set(Calendar.MINUTE,alarmMinute);
 
-        //if we're past the target time, need to wait for tomorrow so calculate time til midnight
-        //then add the target time
-        if (currentTime > targetMilliseconds){
-            System.out.println(currentTime);
-            System.out.println(targetMilliseconds);
-            //24 hours
-            long tomorrow;
-            tomorrow=24*60*60*1000;
-            waitTime=(tomorrow-currentTime)+targetMilliseconds;
-        }
-        //if we're still earlier than target, can just do target-current to get wait interval
-        else{
-            waitTime=targetMilliseconds-currentTime;
+        if (calendar.before(Calendar.getInstance())){
+            calendar.add(Calendar.DAY_OF_MONTH,1);
         }
 
-        System.out.println(waitTime);
 
         //intent: what will happen when alarm goes off. This is an internal alarm, it calls the class
         //Alarm reciever which puts a notification on user screen saying to come rate their day
@@ -147,7 +127,7 @@ public class ActivityNotify extends BaseActivity {
         //alarm managers are a system thing. Set up a repeating alarm that will go off at a certain time. from now and then every day after
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, waitTime, AlarmManager.INTERVAL_DAY, pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
         System.out.println("created alarm");
     }
 

@@ -2,12 +2,12 @@
     <string name="app_name">HappyTrack</string>
 
     <!---Track Activty-->
-    <string name="track_title">Rate Your Day</string>
+    <string name="track_title">How Was Your Day?</string>
     <string name="title_activity_track">ActivityTrack</string>
     <string name="action_settings">Settings</string>
 
     <!---Notify Activity-->
-    <string name="notify_title">Remind Me</string>
+    <string name="notify_title">Set A Notification</string>
     <string name="button_never">Never</string>
     <string name="button_daily">Daily</string>
 
@@ -17,9 +17,15 @@
     <string name="noteshint">Got promoted #work \nUse hashtags for better analysis!</string>
     <string name="title_activity_calendar">ActivityCalendar</string>
 
+    <!--Analysis Activity-->
+    <string name="analysis_title">Your Analysis</string>
+    <string name="title_activity_analysis">ActivityAnalysis</string>
+    <string name="analysis_weekdays">Your Average Week</string>
+    <string name="analysis_hashtags">Your Best and Worst Hashtags</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+
     <string name="title_activity_notify">ActivityNotify</string>
 
     <!--About Screen-->

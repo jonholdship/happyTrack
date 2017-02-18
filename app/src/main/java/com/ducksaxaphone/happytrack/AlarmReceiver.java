@@ -29,6 +29,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                         .setContentTitle("Time to rate your day!")
                         .setContentText("I hope it was a good one")
                         .setAutoCancel(true);
+
         //tell it what we want to do when clicked. In this case, open the track activity
         Intent resultIntent = new Intent(context, ActivityTrack.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
