@@ -1,4 +1,4 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 /**
  * Created by jrh on 18/02/17.

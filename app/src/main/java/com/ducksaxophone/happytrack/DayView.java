@@ -1,4 +1,4 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
 import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;

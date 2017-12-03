@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.ducksaxaphone.happytrack.ActivityAnalysis">
+    tools:context="com.ducksaxophone.happytrack.ActivityAnalysis">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -40,63 +40,71 @@
                     style="@style/menuButtons" />
             </RelativeLayout>
 
-            <LinearLayout
-                android:orientation="vertical"
+            <android.support.v7.widget.CardView
+                style="@style/CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="24dp">
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
                 <TextView
                     style="@style/generalLabels"
-                    android:text="@string/analysis_weekdays"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@string/analysis_weekdays" />
 
                 <lecho.lib.hellocharts.view.ColumnChartView
                     android:id="@+id/WeekChart"
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
-                    android:layout_marginTop="8dp"/>
-            </LinearLayout>
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="24dp"
+                    android:paddingTop="8dp" />
+            </android.support.v7.widget.CardView>
 
-            <LinearLayout
-                android:orientation="vertical"
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="24dp">
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
                 <TextView
                     style="@style/generalLabels"
-                    android:text="@string/analysis_hashtags"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@string/analysis_hashtags" />
 
                 <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:stretchColumns="*">
 
                     <TableRow
                         android:layout_width="0dp"
-                        android:layout_height="match_parent" >
+                        android:layout_height="wrap_content">
 
                         <ImageView
-                            android:layout_width="0dp"
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
                             android:layout_height="48dp"
-                            app:srcCompat="@drawable/happyface1"
                             android:tint="@color/colorAccent"
-                            android:id="@+id/imageView" />
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/happyface1" />
 
                         <ImageView
-                            android:layout_width="0dp"
+                            android:id="@+id/imageView2"
+                            android:layout_width="match_parent"
                             android:layout_height="48dp"
-                            app:srcCompat="@drawable/sadface1"
                             android:tint="@color/colorAccent"
-                            android:id="@+id/imageView2" />
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/sadface1" />
 
 
                     </TableRow>
@@ -107,24 +115,24 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
-                            android:text="TextView"
+                            android:id="@+id/HappyList"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/HappyList" />
+                            android:text="TextView" />
 
                         <TextView
-                            android:text="TextView"
+                            android:id="@+id/SadList"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/SadList" />
+                            android:text="TextView" />
                     </TableRow>
 
                 </TableLayout>
 
-            </LinearLayout>
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
     </ScrollView>

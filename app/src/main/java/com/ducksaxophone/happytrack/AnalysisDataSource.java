@@ -1,12 +1,9 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -119,13 +116,17 @@ public class AnalysisDataSource {
                 //use regex for split. this matches spaces.
                 String[] notesSplit = notes.split("[\\s]");
                 if (notesSplit.length > 0){
-                    for (int i=1; i<notesSplit.length; i++){
+                    for (int i=0; i<notesSplit.length; i++){
+                        System.out.println("new entry");
+                        System.out.println(notesSplit[i]);
                         //only carry on if there's a hashtag
                         if (notesSplit[i].contains("#")) {
-                            //if not already in list, add it to the list and add the rating.
 
+                            //if not already in list, add it to the list and add the rating.
                             tagIndex = hashtags.indexOf(notesSplit[i]);
                             if (tagIndex == -1) {
+                                System.out.println(hashtags);
+                                System.out.println(notesSplit[i]);
                                 Hashtag newTag = new Hashtag(notesSplit[i],(float)cursor.getInt(ratingCol));
                                 hashtags.add(newTag);
                             }

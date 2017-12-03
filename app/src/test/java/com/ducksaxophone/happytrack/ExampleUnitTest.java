@@ -1,4 +1,4 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import org.junit.Test;
 

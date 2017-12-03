@@ -1,4 +1,4 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -7,12 +7,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
-
-import com.ducksaxaphone.happytrack.ActivityTrack;
-import com.ducksaxaphone.happytrack.R;
-
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 /**
  * Created by jrh on 26/01/17.

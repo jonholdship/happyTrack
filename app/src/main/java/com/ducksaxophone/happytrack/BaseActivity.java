@@ -1,4 +1,4 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.widget.ImageButton;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,7 +30,7 @@ public class BaseActivity extends AppCompatActivity
 
         //usualview set up, with menu bit
         ButterKnife.bind(this);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -42,7 +38,7 @@ public class BaseActivity extends AppCompatActivity
     public void onBackPressed() {
 
         //stop the app closing if drawer is open and just close drawer
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

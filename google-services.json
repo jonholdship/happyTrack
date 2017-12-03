@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "557288715036",
+    "firebase_url": "https://happytrack-main.firebaseio.com",
+    "project_id": "happytrack-main",
+    "storage_bucket": "happytrack-main.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557288715036:android:9efb17f1a5df7e4a",
+        "android_client_info": {
+          "package_name": "com.ducksaxophone.happytrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557288715036-qhlq1t75vssb6ve3jmisrv11pbfpe9qp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ducksaxophone.happytrack",
+            "certificate_hash": "6fb7dd94ba3829a3f6ec494351da42a53a8c5bb5"
+          }
+        },
+        {
+          "client_id": "557288715036-qpu2qfcphs4eevjv6a2p2lhq9i95i8id.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbstj852tUdBkTKwspc4BKyiRnuzT9_Fw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557288715036-qpu2qfcphs4eevjv6a2p2lhq9i95i8id.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -52,7 +52,7 @@ public class ActivityAnalysis extends BaseActivity {
             //create a subcolumn.
             dayValues  = new ArrayList<SubcolumnValue>();
             SubcolumnValue dayValue = new SubcolumnValue(dayRatings.get(i), getResources().getColor(R.color.colorPrimary));
-            dayValue.setLabel(dayRatings.get(i).toString());
+            dayValue.setLabel(String.format("%.1f",dayRatings.get(i)));
             dayValues.add(dayValue);
 
             AxisValue axisValue = new AxisValue(i);
@@ -97,7 +97,7 @@ public class ActivityAnalysis extends BaseActivity {
 
         System.out.println("good Days");
         for (int i=0; i< topList.size();i++){
-            listString+=String.valueOf(i+1)+". "+topList.get(i).tag+"\n";
+            listString+=String.format("%1d. %2s \t %3.1f \n",i+1,topList.get(i).tag,topList.get(i).score);
             System.out.println(topList.get(i).score);
         }
         happyList.setText(listString);
@@ -106,7 +106,7 @@ public class ActivityAnalysis extends BaseActivity {
         topList=dataSource.getHashtagsSorted(false);
         listString="";
         for (int i=0; i< topList.size();i++){
-            listString+=String.valueOf(i+1)+". "+topList.get(i).tag+"\n";
+            listString+=String.format("%1d. %2s \t %3.1f \n",i+1,topList.get(i).tag,topList.get(i).score);
             System.out.println(topList.get(i).score);
         }
         sadList.setText(listString);

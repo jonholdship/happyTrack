@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.ducksaxaphone.happytrack.ActivityNotify">
+    tools:context="com.ducksaxophone.happytrack.ActivityNotify">
 
     <ImageButton
         android:id="@+id/MenuButton"
@@ -44,7 +44,7 @@
         android:layout_below="@+id/MenuButton"
         android:layout_centerHorizontal="true">
 
-        <com.ducksaxaphone.happytrack.TextSwitch
+        <com.ducksaxophone.happytrack.TextSwitch
             android:id="@+id/ReminderSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

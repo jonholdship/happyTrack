@@ -1,9 +1,7 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
-import android.database.Cursor;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.Observable;
 
 
 /**
@@ -16,7 +14,7 @@ public class Day extends BaseObservable{
     private Integer rating;
     private String notes;
 
-    public Day(){};
+    public Day(){}
 
     public Day(String today){
         this.id=0;

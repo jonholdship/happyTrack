@@ -1,12 +1,6 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.widget.ImageButton;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 
@@ -15,7 +9,6 @@ import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class ActivityTrack extends BaseActivity {
 
@@ -39,7 +32,7 @@ public class ActivityTrack extends BaseActivity {
         //get currentDay's date and send to database. It'll return a new day object or one from database
         String date = new SimpleDateFormat("dd MMMM yyyy").format(new Date());
         Day today = dayData.getDay(date);
-        todayView = (DayView) findViewById(R.id.TodayView);
+        todayView = findViewById(R.id.TodayView);
         todayView.setDay(today);
 
         //this goes last so that the contentview is set before we try to do things with it in base

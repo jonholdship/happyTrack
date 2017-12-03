@@ -1,26 +1,16 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.app.AlarmManager;
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.icu.util.TimeUnit;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.support.v4.app.NotificationCompat;
-import android.widget.Button;
 import android.widget.TimePicker;
 
-import org.w3c.dom.Text;
-
 import java.util.Calendar;
-import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 public class ActivityNotify extends BaseActivity implements TextSwitch.TextSwitchListener{

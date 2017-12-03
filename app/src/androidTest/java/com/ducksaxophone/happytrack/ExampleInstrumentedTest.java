@@ -1,4 +1,4 @@
-package com.ducksaxaphone.happytrack;
+package com.ducksaxophone.happytrack;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

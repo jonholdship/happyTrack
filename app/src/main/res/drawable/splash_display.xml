@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/colorPrimary"/>
+
+    <item
+        android:top="8dp"
+        android:right="64dp"
+        android:left="64dp">
+        <bitmap android:src="@drawable/logo"
+            android:gravity="fill_horizontal"
+
+            android:tint="@color/colorIcons">
+
+        </bitmap>
+    </item>
+
+</layer-list>
